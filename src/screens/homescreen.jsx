@@ -16,9 +16,7 @@ const Homescreen = () => {
             <Nav/>
             <About/>
             <Experience/>
-            <Service/>
             <Portofolio/>
-            <Testimonial/>
             <Contact/>
             <Footer/>
         </div>
