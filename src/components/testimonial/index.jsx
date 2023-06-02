@@ -1,8 +1,5 @@
 import React from 'react'
 import './style.css'
-import IMG1 from '../../assets/avatar1.jpg'
-import IMG2 from '../../assets/avatar2.jpg'
-import IMG3 from '../../assets/avatar3.jpg'
 
 // import Swiper core and required modules
 import { Pagination } from 'swiper';
@@ -27,7 +24,17 @@ function Testimonial() {
       >
         <SwiperSlide className="testimonial">
           <div className="client__avatar">
-            <img src= {IMG1} alt="Avatar One"/>
+
+0.          </div>
+            <h5 className="client__name">Ernest Achiever</h5>
+            <small className="client__review">
+              alsdkfjj jjjjjjls;as ld;fklasdj fksdfjsdkl fsdjfksd fklasd
+            </small>
+          
+        </SwiperSlide>
+        <SwiperSlide className="testimonial">
+          <div className="client__avatar">
+            {/* <img src= {IMG2} alt="Avatar One" /> */}
           </div>
             <h5 className="client__name">Ernest Achiever</h5>
             <small className="client__review">
@@ -37,17 +44,7 @@ function Testimonial() {
         </SwiperSlide>
         <SwiperSlide className="testimonial">
           <div className="client__avatar">
-            <img src= {IMG2} alt="Avatar One" />
-          </div>
-            <h5 className="client__name">Ernest Achiever</h5>
-            <small className="client__review">
-              alsdkfjj jjjjjjls;as ld;fklasdj fksdfjsdkl fsdjfksd fklasd
-            </small>
-          
-        </SwiperSlide>
-        <SwiperSlide className="testimonial">
-          <div className="client__avatar">
-            <img src= {IMG3} alt="Avatar One" />
+            {/* <img src= {IMG3} alt="Avatar One" /> */}
           </div>
             <h5 className="client__name">Ernest Achiever</h5>
             <small className="client__review">

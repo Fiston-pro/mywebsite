@@ -20,27 +20,25 @@ function About() {
         
         <div className="about__content">
           <div className="about__cards">
-            <article className="about__card">
+            <article className="about__card flex flex-col justify-center items-center ">
               <FaAward className='about__icon'/>
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>2 Years Working</small>
             </article>
-            <article className="about__card">
+            <article className="about__card flex flex-col justify-center items-center">
               <FiUsers className='about__icon'/>
-              <h5>Clients</h5>
-              <small>200+ WorldWide</small>
+              <h5>Coding hours</h5>
+              <small>3500+ hours</small>
             </article>
-            <article className="about__card">
+            <article className="about__card flex flex-col justify-center items-center">
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>80+ Completed Projects</small>
+              <small>10+ Completed Projects</small>
             </article>
           </div>
 
           <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
-          scrambled it to make a type specimen book. 
+          Hi, I'm a Software Engineer with 2 years of experience. I specialize in Typescript, Python,… and have a track record of delivering high-quality software solutions. I focus on clean code, scalability, and user-centric design to solve complex problems and enhance user experiences. Let's discuss how I can join your team and drive to success. Explore my portfolio for more details.
           </p>
 
           <a href="#contact" className="btn btn-primary">Let's Talk</a>

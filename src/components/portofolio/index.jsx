@@ -1,12 +1,25 @@
 import React from "react";
 import "./style.css";
 
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
-import IMG5 from "../../assets/portfolio5.png";
-import IMG6 from "../../assets/portfolio6.jpg";
+import OFFICE from "../../assets/portfolio/objectdetection/office.gif";
+import ROAD from "../../assets/portfolio/objectdetection/road.gif";
+
+import BIRIFRESH_GIF from "../../assets/portfolio/birifresh/birifresh-gif.gif";
+import BIRIFRESH from "../../assets/portfolio/birifresh/birifresh.gif";
+
+import STARCONSTRUCTION from "../../assets/portfolio/starconstruction/starconstruction.gif";
+
+import QUOTEAPP from "../../assets/portfolio/quoteapp/QuoteApp.gif";
+import QUOTEAPP2 from "../../assets/portfolio/quoteapp/QuoteApp.png";
+
+import WORDTIME from "../../assets/portfolio/worldtime/worldtime.gif";
+import WORDTIME2 from "../../assets/portfolio/worldtime/WorldTimeApp.png";
+
+import PORTFOLIOWEB from "../../assets/portfolio/thiswebsite/this-website.gif";
+import PORTFOLIOWEB2 from "../../assets/portfolio/thiswebsite/thiswebsite.gif";
+
+import OPENLANGUAGE from "../../assets/portfolio/openlanguages/openlanguages.PNG";
+
 import MyModal from "./dialog";
 
 import AwesomeSlider from "react-awesome-slider";
@@ -15,34 +28,63 @@ import "react-awesome-slider/dist/styles.css";
 function Portofolio() {
   const portfolio = [
     {
-      title: "This is a portofolio item title",
-      description: "This is a portofolio item description",
-      github: "https://github.com",
-      live: "https://dribble.com/Alien_pixels",
-      images: [IMG1, IMG2, IMG3],
+      title: "Open Languages",
+      description: "Open languages is a project which shows the map of bible translation in the world.",
+      github: "",
+      live: "https://openlanguages.vercel.app/",
+      images: [OPENLANGUAGE],
+      technologies: ["Next.js", "Typescript","Tailwind CSS"],
     },
     {
-      title: "This is a portofolio item title",
-      description: "This is a portofolio item description",
-      github: "https://github.com",
-      live: "https://dribble.com/Alien_pixels",
-      images: [IMG2],
-      technologies: ["React", "Python", "AWS"],
+      title: "Object detection AI",
+      description: "A Jupyter Notebook which detect different objects and display the objects emoji ",
+      github: "https://github.com/Fiston-pro/Emoji-Object-Detection",
+      live: "",
+      images: [OFFICE, ROAD],
+      technologies: ["Python", "Tensorflow"],
     },
     {
-      title: "This is a portofolio item title",
-      description: "This is a portofolio item description",
-      github: "https://github.com",
-      live: "https://dribble.com/Alien_pixels",
-      images: [IMG3],
+      title: "BiriFresh",
+      description: "Online shopping website for fresh products",
+      github: "",
+      live: "",
+      images: [BIRIFRESH_GIF, BIRIFRESH],
+      technologies: ["Wordpress", "PHP", "HTML", "CSS"],
     },
     {
-      title: "This is a portofolio item title",
-      description: "This is a portofolio item description",
-      github: "https://github.com",
-      live: "https://dribble.com/Alien_pixels",
-      images: [IMG4],
+      title: "Star Construction",
+      description: "A freelance project for a construction company",
+      github: "",
+      live: "",
+      images: [STARCONSTRUCTION],
+      technologies: ["Wordpress", "PHP", "HTML", "CSS"],
     },
+    {
+      title: "Quote App",
+      description: "An App which can show your favorite quotes whenever you feel down. I build it using flutter a cross platform framework so that it can run on both android and IOS :)",
+      github: "https://github.com/Fiston-pro/QuoteApp",
+      live: "",
+      images: [QUOTEAPP, QUOTEAPP2],
+      technologies: ["Dart", "Flutter"],
+    },
+    {
+      title: "World Time App",
+      description: "It is a Flutter application that runs on Android or iOS. This app is like a wizard who lends you a wand and allows you to choose any place on our planet, and shows you time and time zone instantly.",
+      github: "https://github.com/Fiston-pro/WorldTimeApp",
+      live: "",
+      images: [WORDTIME, WORDTIME2],
+      technologies: ["Dart", "Flutter"],
+    },
+    {
+      title: "Personal Portfolio Website",
+      description: "An App which can show your favorite quotes whenever you feel down. I build it using flutter a cross platform framework so that it can run on both android and IOS :)",
+      github: "https://github.com/Fiston-pro/Website",
+      live: "https://fiston-pro.github.io/Website/",
+      images: [PORTFOLIOWEB, PORTFOLIOWEB2],
+      technologies: ["React", "Sass", "JavaScript"],
+    }
+
+
   ];
 
   return (

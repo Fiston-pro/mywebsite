@@ -1,0 +1,121 @@
+#include <Adafruit_NeoPixel.h>
+
+#define PIN 6
+byte R[3], G[3], B[3]; // Arrays for storing RGB values of three LEDs
+
+// Parameter 1 = number of pixels in strip
+// Parameter 2 = pin number (most are valid)
+// Parameter 3 = pixel type flags, add together as needed:
+//   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
+//   NEO_KHZ400  400 KHz (classic 'v1' (not v2) FLORA pixels, WS2811 drivers)
+//   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
+//   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(24, PIN, NEO_GRB + NEO_KHZ800);
+
+const int buttonPinClockwise = 3;         // Pin connected to the button for clockwise movement
+const int buttonPinCounterClockwise = 2;  // Pin connected to the button for counterclockwise movement
+bool clockwiseButtonPressed = false;      // Flag to track clockwise button press state
+bool counterClockwiseButtonPressed = false; // Flag to track counterclockwise button press state
+
+void setup()
+{
+  strip.begin();
+
+  // Set all pixels to off (black color)
+  for (byte i = 0; i < 24; i++)
+    strip.setPixelColor(i, 0, 0, 0);
+
+  // set the default lights on
+  static byte defaultIndex[3] = {0, 1, 2};
+  for (byte i = 0; i < 3; i++)
+      {
+        R[i] = random(256);
+        G[i] = random(256);
+        B[i] = random(256);
+        strip.setPixelColor(defaultIndex[i], R[i], G[i], B[i]);
+        }
+
+  strip.show();
+
+  pinMode(buttonPinClockwise, INPUT_PULLUP); // Set clockwise button pin as input with internal pull-up resistor
+  pinMode(buttonPinCounterClockwise, INPUT_PULLUP); // Set counterclockwise button pin as input with internal pull-up resistor
+}
+
+// The loop routine runs over and over again forever:
+void loop()
+{
+    // Execute this code only once when the clockwise button is released after being pressed
+    static byte currentIndex[3] = {0, 1, 2}; // Keeps track of the current pixel index for each LED
+    static byte previousIndex[3] = {0, 0, 0}; // Keeps track of the previous pixel index for each LED
+  // Check if the clockwise button is pressed
+  if (digitalRead(buttonPinClockwise) == LOW)
+  {
+    // Clockwise button is pressed
+    clockwiseButtonPressed = true;
+  }
+  else
+  {
+    // Clockwise button is released
+    if (clockwiseButtonPressed)
+    {
+
+      // Turn off the previous pixels
+      for (byte i = 0; i < 3; i++)
+        strip.setPixelColor(previousIndex[i], 0, 0, 0);
+
+      // Turn on the current pixels
+      for (byte i = 0; i < 3; i++)
+      {
+        R[i] = random(256);
+        G[i] = random(256);
+        B[i] = random(256);
+        strip.setPixelColor(currentIndex[i], R[i], G[i], B[i]);
+
+        // Update the indices for the next iteration
+        previousIndex[i] = currentIndex[i];
+        currentIndex[i] = (currentIndex[i] + 1) % 12;
+      }
+
+      strip.show();
+      
+      clockwiseButtonPressed = false; // Reset the clockwise button press flag
+
+    }
+  }
+  
+  // Check if the counterclock
+  // Check if the counterclockwise button is pressed
+  if (digitalRead(buttonPinCounterClockwise) == LOW)
+  {
+    // Counterclockwise button is pressed
+    counterClockwiseButtonPressed = true;
+  }
+  else
+  {
+    // Counterclockwise button is released
+    if (counterClockwiseButtonPressed)
+    {
+
+      // Turn off the previous pixels
+      for (byte i = 0; i < 3; i++)
+        strip.setPixelColor(previousIndex[i], 0, 0, 0);
+
+      // Turn on the current pixels in counterclockwise direction
+      for (byte i = 0; i < 3; i++)
+      {
+        R[i] = random(256);
+        G[i] = random(256);
+        B[i] = random(256);
+        strip.setPixelColor(currentIndex[i], R[i], G[i], B[i]);
+
+        // Update the indices for the next iteration
+        previousIndex[i] = currentIndex[i];
+        currentIndex[i] = (currentIndex[i] == 0) ? 11 : (currentIndex[i] - 1);
+      }
+
+      strip.show();
+
+      counterClockwiseButtonPressed = false; // Reset the counterclockwise button press flag
+    }
+  }
+}

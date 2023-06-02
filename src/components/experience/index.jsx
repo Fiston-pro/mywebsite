@@ -15,14 +15,14 @@ function Experience() {
             <article className="experience__details">
               <BsPatchCheckFill className='experience__details-icon'/>
               <div>
-                <h4>HTML</h4>
+                <h4>Typescript</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>
             <article className="experience__details">
               <BsPatchCheckFill className='experience__details-icon'/>
               <div>
-                <h4>CSS</h4>
+                <h4>TailWind CSS</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>
@@ -43,7 +43,7 @@ function Experience() {
             <article className="experience__details">
               <BsPatchCheckFill className='experience__details-icon'/>
               <div>
-                <h4>Bootstrap</h4>
+                <h4>Next Js</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>
@@ -63,7 +63,7 @@ function Experience() {
             <article className="experience__details">
               <BsPatchCheckFill className='experience__details-icon'/>
               <div>
-                <h4>Node Js</h4>
+                <h4>Flask</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>
@@ -77,14 +77,14 @@ function Experience() {
             <article className="experience__details">
               <BsPatchCheckFill className='experience__details-icon'/>
               <div>
-                <h4>MySQL</h4>
-                <small className='text-light'>Experienced</small>
+                <h4>AWS/Azure</h4>
+                <small className='text-light'>Intermediate</small>
               </div>
             </article>
             <article className="experience__details">
               <BsPatchCheckFill className='experience__details-icon'/>
               <div>
-                <h4>Django</h4>
+                <h4>Git</h4>
                 <small className='text-light'>Experienced</small>
               </div>
             </article>

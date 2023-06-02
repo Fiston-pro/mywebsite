@@ -11,7 +11,7 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_z098n1p', 'template_zjj6drg', form.current, 'rWiNIIvg4LVTPaXxo')
+    emailjs.sendForm('service_o8aie4u', 'template_zjj6drg', form.current, 'rWiNIIvg4LVTPaXxo')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -27,19 +27,13 @@ function Contact() {
 
       <div className="container contact__container">
         <div className="contact__options">
-          <article className="contact__option">
+          <article className="contact__option flex flex-col justify-center items-center ">
             <MdOutlineEmail className='contact__option-icon'/>
             <h4>Email</h4>
             <h5>byiringiroetienne2@gmail.com</h5>
             <a href="mailto:byiringiroetienne2@gmail.com" target="_blank">Send a message</a>
           </article>
-          <article className="contact__option">
-            <RiMessengerLine className='contact__option-icon'/>
-            <h4>Messenger</h4>
-            <h5>My Facebook</h5>
-            <a href="meta.com" target="_blank">Send a message</a>
-          </article>
-          <article className="contact__option">
+          <article className="contact__option flex flex-col justify-center items-center  ">
             <BsWhatsapp className='contact__option-icon'/>
             <h4>WhatsApp</h4>
             <h5>+48514618708</h5>
